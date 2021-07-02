@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>mokda App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Google Fonts -->
+    <!-- MDB -->
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/css/_all-skins.min.css">
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top ">
+        <div class="container ">
+            <div class="navbar-header ">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Kata Kunci</a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse ">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"><span id="idSpan"> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a  href="#logout">keluar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- list data -->
+        <div class="well" id="divContact">
+            <div class="row">
+
+                <div class="col-6 ">
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#divAddContact">Tambah
+                        Kunci</button>
+                    <p></p>
+                    <!-- list box  collapse -->
+                    <div class="box" id="accordionExample">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- div add record -->
+        <div class="modal modal-info fade" id="divAddContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">New Record</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form id="frmAddRecord">
+                            <!--form  -->
+
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Tittle:</label>
+                                <input type="text" class="form-control" id="tittle" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">User Name:</label>
+                                <input type="text" class="form-control" id="uname" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">User Password:</label>
+                                <input type="text" class="form-control" id="upassword" required />
+                            </div>
+
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                            <input type="submit" name="insert " value="insert" class="btn btn-success" />
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- div edit record  -->
+        <div class="well" id="divEditContact" style="display: none">
+            <div class="row">
+               <div class="col-sm-6">
+
+                  <form id="frmEditRecord">
+                     <h3>Enter Contact Detail</h3>
+   
+                     <div class="form-group">
+                        <label for="tittle100" class="col-ig-4 control-lable"> Tittle</label>
+                        <div class="col-ig-8">
+                           <input type="text" id="tittle100" class="control-form" required/>
+                        </div>
+                     </div>
+   
+                     <div class="form-group">
+                        <label for="uname100" class="col-ig-4 control-lable">User Name</label>
+                        <div class="col-ig-8">
+                           <input type="text" id="uname100" class="control-form" required/>
+                        </div>
+                     </div>
+   
+                     <div class="form-group">
+                        <label for="upassword100" class="col-ig-4 control-lable">User Password</label>
+                        <div class="col-ig-8">
+                           <input type="text" id="upassword100" class="control-form" required/>
+                        </div>
+                     </div>
+   
+                     <div class="form-group">
+                        <div class="col-ig-8 col-lg-4">
+                           <input type="hidden" id="contactid" />
+                           <button type="submit" class="btn btn-success">update Contact</button>
+                           <button type="reset" class="btn btn-success">Reset</button>
+                        </div>
+                     </div>
+   
+                  </form>
+               </div>
+            </div>
+   
+         </div>
+
+
+         
+
+    </div>
+
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/signals.min.js"></script>
+    <script src="js/hasher.min.js"></script>
+    <script src="js/crossroads.min.js"></script>
+    <script src="js/bootbox.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
